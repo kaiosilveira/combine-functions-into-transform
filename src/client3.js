@@ -3,7 +3,7 @@ const { baseRate } = require('./tax-utils');
 
 const rawReading = acquireReading();
 const aReading = enrichReading(rawReading);
-const basicChargeAmount = calculateBaseCharge(aReading);
+const basicChargeAmount = aReading.baseCharge;
 
 console.log(`basic charge amount is ${basicChargeAmount}`);
 
