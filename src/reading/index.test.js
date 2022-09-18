@@ -15,4 +15,9 @@ describe('enrichReading', () => {
     const resultingReading = enrichReading(inputReading);
     expect(typeof resultingReading.baseCharge).toBe('number');
   });
+
+  it('should enrich the reading with the taxable charge', () => {
+    const resultingReading = enrichReading(inputReading);
+    expect(typeof resultingReading.taxableCharge).toBe('number');
+  });
 });
